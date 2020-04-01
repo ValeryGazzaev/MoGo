@@ -105,7 +105,7 @@
 	position: absolute;
 	content: '';
 	bottom: 0;
-	display: block;
+	display: inline-block;
 	width: 100%;
 	height: 3px;
 	opacity: 0;
@@ -147,6 +147,118 @@
 	border-radius: 5px;
 	display: block;
 } 
+
+.header-midlle-slider {
+	position: relative;
+	width: 1200px;
+}
+
+.header-midlle-slider input {
+	display: none;
+}
+
+.header-midlle-inner {
+	overflow: hidden;
+}
+
+.header-midlle-slides {
+	width: 400%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Slides start */
+.header-midlle-slides .slides {
+	width: 1200px;
+	text-align: center;
+}
+
+.header-midlle-slides .slides .promo p:nth-child(1) {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 72px;
+	line-height: 86.4px;
+	color: #fff;
+
+}
+
+.header-midlle-slides .slides .promo p:nth-child(2) {
+	position: relative;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 150px;
+	line-height: 152px;
+	color: #fff;
+}
+
+.header-midlle-slides .slides .promo p:nth-child(2)::after {
+	position: absolute;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 150px;
+	line-height: 152px;
+	color: #fff;
+}
+
+.header-midlle-slides .slides .promo a {
+	display: inline-block;
+	width: 159px;
+	height: 43px;
+	font-size: 14px;
+	line-height: 43px;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	border: 1px solid #fff;
+	color: #fff;
+}
+
+.header-midlle-slides .slides .promo a:hover {
+	background-color: #fff;
+	color: #e88a83;
+}
+/* Slides end */
+
+/* Slider controls start*/
+.header-midlle-controls {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	
+}
+
+.header-midlle-controls label {
+	position: relative;
+	width: 285px;
+}
+
+.header-midlle-controls label::before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+}
+
+#midle-btn-1:checked ~ .header-midlle-controls label:nth-child(1)::before,
+#midle-btn-2:checked ~ .header-midlle-controls label:nth-child(2)::before,
+#midle-btn-3:checked ~ .header-midlle-controls label:nth-child(3)::before,
+#midle-btn-4:checked ~ .header-midlle-controls label:nth-child(4)::before {
+	background-image: linear-gradient(to right, );
+}
+
+/* Slider controls end*/
 
 @media (max-width: 820px) {
 	.header-top .menu-btn {
