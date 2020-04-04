@@ -1,6 +1,5 @@
 .header {
 	position: relative;
-	height: 100vh;
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-image: url('../../img/backgrounds/header-bg.jpg');
@@ -21,6 +20,7 @@
 
 .header-wrap {
 	position: relative;
+	height: 1000px;
 	z-index: 11;
 }
 
@@ -50,7 +50,7 @@
 
 .header-top {
 	position: relative;
-	height: 68px;
+	height: 80px;
 }
 
 .header-top input {
@@ -85,6 +85,7 @@
 	height: 68px;
 	margin-left: auto;
 	margin-right: 50px;
+	margin-top: 5px;
 }
 
 .header-nav a {
@@ -111,7 +112,7 @@
 	opacity: 0;
 	visibility: hidden;
 	background-color: #fce38a;
-	transition: all 0.3s ease;
+	
 }
 
 .header-nav a:hover:before {
@@ -128,12 +129,17 @@
 }
 
 .header-right i {
+	transition: all 0.2s ease;
 	color: #fff;
+}
+
+.header-right i:hover {
+	filter: drop-shadow(2px 2px 5px #fff);
 }
 
 .header-right form .search-line {
 	display: none;
-	transition: all 0.2s ease;
+	transition: all 1s ease;
 }
 
 .header-right form #search-btn:checked ~ .search-line {
@@ -152,6 +158,8 @@
 
 .header-middle-slider {
 	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
 	width: 1200px;
 }
 
@@ -185,39 +193,43 @@
 	font-size: 72px;
 	line-height: 86px;
 	color: #fff;
-	margin-top: 160px;
+	margin-top: 140px;
 }
 
 .header-middle-slides .slides .promo p:nth-child(2) {
 	position: relative;
+	max-width: 885px;
 	font-family: 'Montserrat', sans-serif;
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 150px;
 	line-height: 152px;
 	color: #fff;
+	margin: 27px auto 91px;
 }
 
 .header-middle-slides .slides .promo p:nth-child(2)::after {
 	position: absolute;
-	font-family: 'Montserrat', sans-serif;
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 150px;
-	line-height: 152px;
-	color: #fff;
+	content: "";
+	bottom: -40px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 62px;
+	height: 3px;
+	background-color: #fff;
 }
 
 .header-middle-slides .slides .promo a {
 	display: inline-block;
 	width: 159px;
-	height: 43px;
+	height: 36px;
 	font-size: 14px;
-	line-height: 43px;
+	line-height: 36px;
 	font-family: 'Montserrat', sans-serif;
 	text-transform: uppercase;
 	font-weight: 700;
-	border: 1px solid #fff;
+	border: 3px solid #fff;
+	transition: all 0.2s ease;
 	color: #fff;
 }
 
@@ -231,7 +243,8 @@
 .header-middle-controls {
 	position: absolute;
 	width: 100%;
-	bottom: 0;
+	height: 68px;
+	bottom: -226px;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -244,14 +257,27 @@
 .header-middle-controls label {
 	position: relative;
 	width: 285px;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 74px;
+	color: #fff;
 }
 
 .header-middle-controls label::before {
 	position: absolute;
 	content: "";
 	width: 100%;
-	height: 2px;
+	height: 3px;
 	background-color: #fff;
+}
+
+.header-middle-controls label span {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 400;
+	text-indent: 10px;
 }
 
 #middle-btn-1:checked ~ .header-middle-controls label:nth-child(1)::before,
@@ -262,25 +288,20 @@
 }
 
 #middle-btn-1:checked ~ .header-middle-inner .header-middle-slides {
-	-webkit-transform: translateX(0);
-
+	transform: translateX(0);
 }
 
 #middle-btn-2:checked ~ .header-middle-inner .header-middle-slides {
-	-webkit-transform: translateX(-1200px);
-
+	transform: translateX(-1200px);
 }
 
 #middle-btn-3:checked ~ .header-middle-inner .header-middle-slides {
-	-webkit-transform: translateX(-2400px);
-
+	transform: translateX(-2400px);
 }
 
 #middle-btn-4:checked ~ .header-middle-inner .header-middle-slides {
-	-webkit-transform: translateX(-3600px);
+	transform: translateX(-3600px);
 }
-
-
 
 
 /* Slider controls end*/
@@ -303,11 +324,26 @@
 		flex-direction: column;
 		opacity: 0;
 		visibility: hidden;
-		transition: all 0.2s ease;	
+		transition: all 0.2s ease;
+		background-color: #e88883;	
+		border-radius:  0 0 5px 5px;
+
 	}
+
 	#menu-btn:checked ~ .header-nav {
 		opacity: 1;
 		visibility: visible;
 		z-index: 10;
 	}
+	.header-nav a {
+
+	}
+	.header-nav a:hover {
+	width: 100%;
+	text-align: center;
+}
+.header-nav a:hover:before {
+	left: 50%;
+	transform: translateX(-50%);
+}
 }
