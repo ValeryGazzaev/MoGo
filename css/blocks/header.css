@@ -273,7 +273,7 @@
 	background-color: #fff;
 }
 
-.header-middle-controls label span {
+.header-middle-controls label .words {
 	display: inline-block;
 	font-size: 16px;
 	font-weight: 400;
@@ -328,7 +328,7 @@
 		font-size: 18px;
 		white-space: nowrap;
 	}
-	.header-middle-controls label span {
+	.header-middle-controls label .words {
 		font-size: 12px;
 	}
 }
@@ -424,6 +424,34 @@
 	}
 }
 
+@media (max-width: 500px) {
+	.header-middle-controls {
+		width: 320px;
+		height: 45px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.header-middle-controls label {
+		width: 75px;
+		line-height: 38px;
+	}
+	.header-middle-controls label .num {
+		display: none;
+	}
+	.header-middle-controls label .words {
+		width: 100%;
+		text-align: center;
+		text-indent: 0;
+	}
+	#middle-btn-1:checked ~ .header-middle-controls label:nth-child(1)::before,
+	#middle-btn-2:checked ~ .header-middle-controls label:nth-child(2)::before,
+	#middle-btn-3:checked ~ .header-middle-controls label:nth-child(3)::before,
+	#middle-btn-4:checked ~ .header-middle-controls label:nth-child(4)::before {
+		background-image: none;
+		background-color: #f38181;
+	}
+}
+
 @media (max-width: 420px) {
 	.header-wrap {
 		height: 430px;
@@ -452,6 +480,7 @@
 	.header-middle-slides .slides .promo p:nth-child(2) {
 		margin: 27px auto 30px;
 	}
+
 }
 
 
