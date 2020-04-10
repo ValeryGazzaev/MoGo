@@ -237,6 +237,12 @@
 	background-color: #fff;
 	color: #e88a83;
 }
+.header-middle-slides .slides .promo a:active {
+	background-color: #e88a83;
+	border-color: #e88a83; 
+	color: #fff;
+}
+
 /* Slides end */
 
 /* Slider controls start*/
