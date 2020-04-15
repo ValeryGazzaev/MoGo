@@ -1,5 +1,5 @@
 .story {
-	padding-top: 86px;
+	padding-top: 91px;
 }
 
 .story-top {
@@ -7,12 +7,13 @@
 }
 
 .story-wrap {
-	padding: 80px 0 110px;
+	padding: 78px 0 110px;
 }
 
 .story-wrap p {
 	text-align: center;
 	margin-bottom: 96px;
+	padding: 0 15px;
 }
 
 .story-blocks {
@@ -111,7 +112,7 @@
 	text-transform: uppercase;
 	font-size: 14px;
 	font-weight: 500; 
-	padding: 70px 0 89px;
+	padding: 71px 0 88px;
 }
 
 .story-bottom-wrap .b-blocks p:nth-child(1) {
@@ -122,4 +123,46 @@
 
 .story-bottom-wrap .block-5 {
 	border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 740px) {
+	.story {
+		padding-top: 70px;
+	}
+	.story-wrap {
+		padding: 78px 0 40px;
+	}
+	.story-bottom-wrap,
+	.story-blocks {
+		-webkit-flex-wrap: wrap;
+		-moz-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		-o-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	.story-bottom-wrap {
+		justify-content: center;
+	}
+	.story-blocks .blocks {
+		left: 50%;
+		transform: translateX(-50%);
+		margin-bottom: 20px; 
+	}
+	.story-bottom-wrap .b-blocks {
+		border-left: none;
+		padding: 30px 0;
+	}
+	.story-bottom-wrap .block-5 {
+		border-right: none;
+	}
+}
+
+@media (max-width: 540px) {
+	.story-bottom-wrap .b-blocks {
+		width: 200px;
+	}
+	.story-bottom-wrap .b-blocks p:nth-child(1) {
+		font-size: 40px;
+		line-height: 44px;
+	}
 }
