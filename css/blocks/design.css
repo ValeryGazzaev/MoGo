@@ -1,0 +1,35 @@
+.design {
+	padding-top: 100px;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-image: url('../../img/backgrounds/unique-bg.jpg');
+}
+
+.design-top {
+	text-align: center;
+}
+
+.design-wrap {
+	position: relative;
+}
+
+.design-wrap .image {
+	position: relative;
+	width: 480px;
+	height: 580px;
+	background-image: url('../../img/all_sprites.png');
+	background-position: -360px 0;
+	margin: 0 auto;
+}
+
+.design-wrap .image::before {
+	position: absolute;
+	content: "";
+	bottom: -100px;
+	left: 100%;
+	transform: translateX(-50%);
+	width: 230px;
+	height: 470px;
+	background-image: url('../../img/all_sprites.png');
+	background-position: -50px -20px;
+}
