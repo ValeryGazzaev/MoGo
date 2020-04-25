@@ -1,0 +1,13 @@
+.whatwedo {
+	padding: 100px 0 110px;
+}
+
+.whatwedo-top,
+.whatwedo .center-p {
+	text-align: center;
+}
+
+.whatwedo .center-p {
+	max-width: 970px;
+	margin: 0 auto;
+}

@@ -25,8 +25,8 @@
 .design-wrap .image::before {
 	position: absolute;
 	content: "";
-	bottom: -100px;
-	left: 100%;
+	bottom: -80px;
+	left: 105%;
 	transform: translateX(-50%);
 	width: 230px;
 	height: 470px;
