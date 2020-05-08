@@ -1,5 +1,5 @@
 .whatwedo {
-	padding: 100px 0 110px;
+	padding: 109px 0 110px;
 }
 
 .whatwedo-top,
@@ -9,7 +9,7 @@
 
 .whatwedo .center-p {
 	max-width: 970px;
-	margin: 0 auto;
+	margin: 80px auto 65px;
 }
 
 .whatwedo-wrap {
@@ -92,3 +92,47 @@
 	color: #999999;
 }
 
+/* Slider */
+
+.whatwedo-slider {
+	position: relative;
+}
+
+.whatwedo-slider-slides {
+	width: 300%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	transition: all 1s ease;
+}
+
+.whatwedo-controls {
+	max-width: 1155px;
+}
+/* Left arrow */
+#wtd-btn-1:checked ~ .whatwedo-controls label:nth-child(3),
+#wtd-btn-2:checked ~ .whatwedo-controls label:nth-child(1),
+#wtd-btn-3:checked ~ .whatwedo-controls label:nth-child(2) {
+	position: absolute;
+	display: block;
+	left: 0;
+	width: 12px;
+	height: 22px;
+	background-image: url('../../img/arrow.png');
+}
+
+/* Right arrow */
+#wtd-btn-1:checked ~ .whatwedo-controls label:nth-child(2),
+#wtd-btn-2:checked ~ .whatwedo-controls label:nth-child(3),
+#wtd-btn-3:checked ~ .whatwedo-controls label:nth-child(1) {
+	position: absolute;
+	display: block;
+	right: 0;
+	width: 12px;
+	height: 22px;
+	background-image: url('../../img/arrow.png');
+	transform: scaleX(-1);
+}
