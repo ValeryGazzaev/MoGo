@@ -101,6 +101,8 @@
 .whatwedo-slider {
 	position: relative;
 	width: 1200px;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .whatwedo-slider input {
@@ -124,10 +126,34 @@
 
 .whatwedo-slider-slides .slides {
 	width: 1200px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	padding: 70px 105px;
+}
+
+.whatwedo-slider-slides .slides .images {
+	width: 148px;
+	height: 148px;
+	border: 2px solid #95e1d3;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('../../img/speech.png');
+	margin-right: 60px;
+}
+
+.whatwedo-slider-slides .slides .slides-inner p:first-child {
+	width: 760px;
 }
 
 .whatwedo-controls {
-	max-width: 1155px;
+	position: relative;
+	width: 1155px;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 10;
 }
 
 /* Left arrow */
