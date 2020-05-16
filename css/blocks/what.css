@@ -1,5 +1,9 @@
 .whatwedo {
-	padding: 109px 0 110px;
+	padding-top: 109px;
+}
+
+.whatwedo-wrap {
+	padding-bottom: 120px;
 }
 
 .whatwedo-top,
@@ -9,7 +13,7 @@
 
 .whatwedo .center-p {
 	max-width: 970px;
-	margin: 80px auto 65px;
+	margin: 77px auto 69px;
 }
 
 .whatwedo-wrap {
@@ -22,7 +26,7 @@
 
 .whatwedo .image {
 	flex-basis: 49.5%;
-	height: 397px;
+	height: 400px;
 	background-position: -890px 0;
 	background-image: url('../../img/all_sprites.png');
 	margin-right: 30px;
@@ -101,7 +105,7 @@
 .whatwedo-slider {
 	position: relative;
 	width: 1200px;
-	left: 50%;
+	left: 51.5%;
 	transform: translateX(-50%);
 }
 
@@ -146,13 +150,38 @@
 
 .whatwedo-slider-slides .slides .slides-inner p:first-child {
 	width: 760px;
+	font-size: 24px;
+	line-height: 36px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-style: italic;
+}
+
+.whatwedo-slider-slides .slides .slides-inner p:last-child {
+	position: relative;
+	width: 180px;
+	font-size: 24px;
+	line-height: 36px;
+	font-family: 'Kaushan Script', cursive;
+	color: #000;
+	text-indent: 70px;
+}
+
+.whatwedo-slider-slides .slides .slides-inner p:last-child::before {
+	position: absolute;
+	content: "";
+	width: 60px;
+	height: 3px;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+
+	background-color: #f38181;
 }
 
 .whatwedo-controls {
 	position: relative;
 	width: 1155px;
-	top: 50%;
-	transform: translateY(-50%);
 	z-index: 10;
 }
 
@@ -162,6 +191,7 @@
 #wtd-btn-3:checked ~ .whatwedo-controls label:nth-child(2) {
 	position: absolute;
 	display: block;
+	top: 140px;
 	left: 0;
 	width: 12px;
 	height: 22px;
@@ -174,6 +204,7 @@
 #wtd-btn-3:checked ~ .whatwedo-controls label:nth-child(1) {
 	position: absolute;
 	display: block;
+	top: 140px;
 	right: 0;
 	width: 12px;
 	height: 22px;
