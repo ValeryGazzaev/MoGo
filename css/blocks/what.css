@@ -2,10 +2,6 @@
 	padding-top: 109px;
 }
 
-.whatwedo-wrap {
-	padding-bottom: 120px;
-}
-
 .whatwedo-top,
 .whatwedo .center-p {
 	text-align: center;
@@ -22,6 +18,7 @@
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	padding-bottom: 120px;
 }
 
 .whatwedo .image {
@@ -86,7 +83,7 @@
 }
 
 .whatwedo #accordion .step-p {
-	width: 88%;
+	max-width: 577px;
 	font-family: 'Roboto', sans-serif;
 	font-style: italic;
 	font-size: 14px;
@@ -135,13 +132,13 @@
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	padding: 70px 105px;
+	padding: 70px 100px 62px;
 }
 
 .whatwedo-slider-slides .slides .images {
-	width: 148px;
-	height: 148px;
-	border: 2px solid #95e1d3;
+	width: 147px;
+	height: 147px;
+	border: 3px solid #95e1d3;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-image: url('../../img/speech.png');
@@ -155,6 +152,8 @@
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	font-style: italic;
+	margin-top: 2px;
+	margin-bottom: 12px;
 }
 
 .whatwedo-slider-slides .slides .slides-inner p:last-child {
@@ -175,7 +174,6 @@
 	top: 50%;
 	transform: translateY(-50%);
 	left: 0;
-
 	background-color: #f38181;
 }
 
@@ -222,4 +220,28 @@
 }
 #wtd-btn-3:checked ~ .whatwedo-inner .whatwedo-slider-slides {
 	transform: translateX(-2400px);
+}
+
+/* @media (1200px) {
+	убрать изображение слайдера
+} */
+
+@media (max-width: 1115px) {
+	.whatwedo-wrap {
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+		padding-bottom: 60px;
+	}
+	.whatwedo .image {
+		flex-basis: auto;
+		width: 570px;
+		height: 400px;
+		margin: 0 auto 30px;
+	}
+	.whatwedo #accordion .step-p {
+		max-width: 100%;
+	}
 }
