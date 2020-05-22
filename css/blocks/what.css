@@ -132,6 +132,7 @@
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	justify-content: space-between;
 	padding: 70px 100px 62px;
 }
 
@@ -222,9 +223,17 @@
 	transform: translateX(-2400px);
 }
 
-/* @media (1200px) {
-	убрать изображение слайдера
-} */
+@media (max-width: 1200px) {
+	.whatwedo-slider-slides .slides {
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+		-ms-align-items: center;
+		align-items: center;
+	}
+}
 
 @media (max-width: 1115px) {
 	.whatwedo-wrap {
