@@ -121,7 +121,7 @@
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	transition: all 1s ease;
 }
 
@@ -181,6 +181,7 @@
 .whatwedo-controls {
 	position: relative;
 	width: 1155px;
+	margin: 0 auto;
 	z-index: 10;
 }
 
@@ -225,13 +226,62 @@
 
 @media (max-width: 1200px) {
 	.whatwedo-slider-slides .slides {
-		-webkit-flex-direction: column;
-		-moz-flex-direction: column;
-		-ms-flex-direction: column;
-		-o-flex-direction: column;
-		flex-direction: column;
-		-ms-align-items: center;
-		align-items: center;
+	width: 1200px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	-ms-align-items: center;
+	align-items: center;
+	padding: 70px 100px 170px;
+}
+.whatwedo-slider-slides .slides .slides-inner p:first-child {
+	width: 90vw;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.whatwedo-slider-slides .slides .images {
+	width: 147px;
+	height: 147px;
+	border: 3px solid #95e1d3;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('../../img/speech.png');
+	margin-right: 0;
+	margin-bottom: 30px;
+}
+	/* Left arrow */
+	#wtd-btn-1:checked ~ .whatwedo-controls label:nth-child(3),
+	#wtd-btn-2:checked ~ .whatwedo-controls label:nth-child(1),
+	#wtd-btn-3:checked ~ .whatwedo-controls label:nth-child(2) {
+		position: absolute;
+		display: block;
+		top: 475px;
+		left: 35%;
+		width: 12px;
+		height: 22px;
+		background-image: url('../../img/arrow.png');
+	}
+	/* Right arrow */
+	#wtd-btn-1:checked ~ .whatwedo-controls label:nth-child(2),
+	#wtd-btn-2:checked ~ .whatwedo-controls label:nth-child(3),
+	#wtd-btn-3:checked ~ .whatwedo-controls label:nth-child(1) {
+		position: absolute;
+		display: block;
+		top: 475px;
+		right: 35%;
+		width: 12px;
+		height: 22px;
+		background-image: url('../../img/arrow.png');
+		transform: scaleX(-1);
 	}
 }
 
@@ -252,5 +302,33 @@
 	}
 	.whatwedo #accordion .step-p {
 		max-width: 100%;
+	}
+}
+
+@media (max-width: 667px) {
+		/* Left arrow */
+	#wtd-btn-1:checked ~ .whatwedo-controls label:nth-child(3),
+	#wtd-btn-2:checked ~ .whatwedo-controls label:nth-child(1),
+	#wtd-btn-3:checked ~ .whatwedo-controls label:nth-child(2) {
+		position: absolute;
+		display: block;
+		top: 560px;
+		left: 35%;
+		width: 12px;
+		height: 22px;
+		background-image: url('../../img/arrow.png');
+	}
+	/* Right arrow */
+	#wtd-btn-1:checked ~ .whatwedo-controls label:nth-child(2),
+	#wtd-btn-2:checked ~ .whatwedo-controls label:nth-child(3),
+	#wtd-btn-3:checked ~ .whatwedo-controls label:nth-child(1) {
+		position: absolute;
+		display: block;
+		top: 560px;
+		right: 35%;
+		width: 12px;
+		height: 22px;
+		background-image: url('../../img/arrow.png');
+		transform: scaleX(-1);
 	}
 }
