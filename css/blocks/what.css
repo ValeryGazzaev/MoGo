@@ -73,6 +73,10 @@
 	background-position: -2298px -930px;
 } 
 
+.whatwedo #accordion h3 {
+	position: relative;
+}
+
 .whatwedo #accordion h3 p {
 	width: 100%;
 	height: 50px;
@@ -80,6 +84,36 @@
 	line-height: 53px; 
 	margin-left: 17px;
 	color: #000;
+}
+
+.whatwedo #accordion h3 label {
+	position: absolute;
+	width: 12px;
+	height: 24px;
+	right: 20px;
+	background-repeat: no-repeat;
+	background-position: center;
+	transform: rotate(-90deg);
+	background-image: url('../../img/arrow.png');
+}
+
+#wtd-arrow-1:checked ~ h3 label {
+	transform: rotate(90deg);
+	background-image: url('../../img/arrow.png');
+}
+
+#wtd-arrow-2:checked ~ label {
+	transform: rotate(-30deg);
+	background-image: url('../../img/arrow.png');
+}
+
+#wtd-arrow-3:checked ~ label {
+	transform: rotate(-30deg);
+	background-image: url('../../img/arrow.png');
+}
+
+.whatwedo #accordion h3 input {
+	display: none;
 }
 
 .whatwedo #accordion .step-p {
@@ -101,11 +135,12 @@
 }
 
 .whatwedo #accordion .step-p::-webkit-scrollbar-track { 
-	border-radius: 5px;
+	border-radius: 3px;
 }
 
 .whatwedo #accordion .step-p::-webkit-scrollbar-thumb {
-	border-radius: 5px;
+	border-radius: 3px;
+	width: 5px;
 	background-color: #95e1d3; 
 }
 
@@ -250,7 +285,7 @@
 		flex-direction: column;
 		-ms-align-items: center;
 		align-items: center;
-		padding: 70px 100px 170px;
+		padding: 70px 100px 70px;
 	}
 	.whatwedo-slider-slides .slides .slides-inner p:first-child {
 		width: 90vw;
@@ -274,7 +309,7 @@
 	#wtd-btn-3:checked ~ .whatwedo-controls label:nth-child(2) {
 		position: absolute;
 		display: block;
-		top: 475px;
+		top: 125px;
 		left: 35%;
 		width: 12px;
 		height: 22px;
@@ -286,7 +321,7 @@
 	#wtd-btn-3:checked ~ .whatwedo-controls label:nth-child(1) {
 		position: absolute;
 		display: block;
-		top: 475px;
+		top: 125px;
 		right: 35%;
 		width: 12px;
 		height: 22px;
@@ -296,21 +331,21 @@
 }
 
 @media (max-width: 1115px) {
-		.whatwedo #accordion .step-p {
-	overflow-y: none;
-}
-.whatwedo #accordion .step-p::-webkit-scrollbar {
-	display: none;
-}
+	.whatwedo #accordion .step-p {
+		overflow-y: none;
+	}
+	.whatwedo #accordion .step-p::-webkit-scrollbar {
+		display: none;
+	}
 
-.whatwedo #accordion .step-p::-webkit-scrollbar-track { 
-	display: none;
-}
+	.whatwedo #accordion .step-p::-webkit-scrollbar-track { 
+		display: none;
+	}
 
-.whatwedo #accordion .step-p::-webkit-scrollbar-thumb {
-	display: none;
-}
-.whatwedo-wrap {
+	.whatwedo #accordion .step-p::-webkit-scrollbar-thumb {
+		display: none;
+	}
+	.whatwedo-wrap {
 		-webkit-flex-direction: column;
 		-moz-flex-direction: column;
 		-ms-flex-direction: column;
@@ -329,30 +364,3 @@
 	}
 }
 
-@media (max-width: 667px) {
-	/* Left arrow */
-	#wtd-btn-1:checked ~ .whatwedo-controls label:nth-child(3),
-	#wtd-btn-2:checked ~ .whatwedo-controls label:nth-child(1),
-	#wtd-btn-3:checked ~ .whatwedo-controls label:nth-child(2) {
-		position: absolute;
-		display: block;
-		top: 560px;
-		left: 35%;
-		width: 12px;
-		height: 22px;
-		background-image: url('../../img/arrow.png');
-	}
-	/* Right arrow */
-	#wtd-btn-1:checked ~ .whatwedo-controls label:nth-child(2),
-	#wtd-btn-2:checked ~ .whatwedo-controls label:nth-child(3),
-	#wtd-btn-3:checked ~ .whatwedo-controls label:nth-child(1) {
-		position: absolute;
-		display: block;
-		top: 560px;
-		right: 35%;
-		width: 12px;
-		height: 22px;
-		background-image: url('../../img/arrow.png');
-		transform: scaleX(-1);
-	}
-}
