@@ -78,38 +78,27 @@
 }
 
 .whatwedo #accordion h3 p {
+	position: relative;
 	width: 100%;
 	height: 50px;
 	vertical-align: middle;
 	line-height: 53px; 
 	margin-left: 17px;
 	color: #000;
+	z-index: 9;
 }
 
 .whatwedo #accordion h3 label {
 	position: absolute;
-	width: 12px;
+	width: 100%;
 	height: 24px;
-	right: 24px;
+	right: -260px;
+	background-color: transparent;
 	background-repeat: no-repeat;
 	background-position: center;
-	transform: rotate(-90deg);
-	background-image: url('../../img/arrow.png');
-}
-
-#wtd-arrow-1:checked ~ h3 label {
 	transform: rotate(90deg);
 	background-image: url('../../img/arrow.png');
-}
-
-#wtd-arrow-2:checked ~ label {
-	transform: rotate(-30deg);
-	background-image: url('../../img/arrow.png');
-}
-
-#wtd-arrow-3:checked ~ label {
-	transform: rotate(-30deg);
-	background-image: url('../../img/arrow.png');
+	z-index: 20;
 }
 
 .whatwedo #accordion h3 input {
@@ -284,6 +273,9 @@
 }
 
 @media (max-width: 1200px) {
+	.whatwedo #accordion h3 label {
+		display: none;
+	}
 	.whatwedo-slider-slides .slides {
 		justify-content: space-between;
 		-webkit-flex-direction: column;
