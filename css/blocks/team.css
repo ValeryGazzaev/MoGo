@@ -26,9 +26,78 @@
 }
 
 .team-wrap .blocks .team-image {
+	position: relative;
 	width: 380px;
 	height: 470px;
 	background-repeat: no-repeat;
-	background-position: 0 0;
+	transition: all 0.3s ease; 
+	background-position: -940px -680px;
 	background-image: url('../../img/all_sprites.png');
+}
+
+.team-wrap .blocks .team-image:hover::after {
+	position: absolute;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
+}
+
+.team-wrap .blocks .image-2 {
+	background-position: -1340px -680px;
+}
+
+.team-wrap .blocks .image-3 {
+	background-position: -540px -680px;
+}
+
+.team-wrap .blocks .team-image:hover {
+	box-shadow: 10px 10px 0 0 #95e1d3;
+}
+
+.team-bottom {
+	background-color: #f8f8f8;
+	padding: 60px 0;
+}
+
+.team-bottom-wrap {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.team-bottom-wrap .logos {
+	width: 120px;
+	height: 120px;
+	background-position: -1494px -27px;
+	background-image: url('../../img/all_sprites.png');
+}
+
+.team-bottom-wrap .logo-2 {
+	background-position: -1715px -27px;
+}
+.team-bottom-wrap .logo-3 {
+	position: relative;
+	width: 130px;
+	height: 130px;
+	top: -5px;
+	background-position: -1905px -20px;
+}
+.team-bottom-wrap .logo-4 {
+	background-position: -2131px -27px;
+}
+.team-bottom-wrap .logo-5 {
+	background-position: -2340px -25px;
+}
+.team-bottom-wrap .logo-6 {
+	background-position: -2563px -20px;
 }
