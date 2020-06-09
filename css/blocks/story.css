@@ -65,8 +65,8 @@
 	line-height: 280px;
 	opacity: 0;
 	visibility: hidden;
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba(252, 227, 138, 0.8)), to(rgba(243, 129, 129, 0.8)));
 	background: -o-linear-gradient(rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(252, 227, 138, 0.8)), to(rgba(243, 129, 129, 0.8)));
 	background: linear-gradient(rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
 	-webkit-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
@@ -183,6 +183,5 @@
 		line-height: 44px;
 	}
 }
-
 
 

@@ -1,5 +1,5 @@
 .team {
-	padding-top: 109px;
+	padding-top: 97px;
 }
 
 .team-top,
@@ -9,7 +9,7 @@
 
 .team .center-p {
 	max-width: 970px;
-	margin: 77px auto 69px;
+	margin: 77px auto 80px;
 }
 
 .team-wrap {
@@ -18,11 +18,31 @@
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
 	justify-content: space-between;
+	margin-bottom: 115px;
 }
 
 .team-wrap .blocks {
 	text-align: center;
+}
+
+.team-wrap .blocks p:nth-child(2) {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin: 35px 0 5px;
+	color: #333333;
+}
+
+.team-wrap .blocks p:nth-child(3) {
+	font-style: italic;
 }
 
 .team-wrap .blocks .team-image {
@@ -41,7 +61,7 @@
 	display: block;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
+	background: linear-gradient(to top,rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
 }
 
 .team-wrap .blocks .image-2 {
@@ -55,6 +75,40 @@
 .team-wrap .blocks .team-image:hover {
 	box-shadow: 10px 10px 0 0 #95e1d3;
 }
+
+.team-wrap .blocks .team-image .social {
+	position: absolute;
+	width: 270px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	z-index: 10;
+}
+
+.team-wrap .blocks .team-image:hover .social {
+	display: block;
+}
+
+.team-wrap .blocks .team-image .social .social-btn {
+	position: relative;
+	display: inline-block;
+	width: 56px;
+	height: 56px;
+	background-color: #fce38a;
+	color: #f38181;
+}
+
+.team-wrap .blocks .team-image .social .social-btn i {
+	font-size: 22px;
+	line-height: 56px;
+}
+
+.team-wrap .blocks .team-image .social .social-btn:hover {
+	background-color: #f38181;
+	color: #fff;
+}
+
 
 .team-bottom {
 	background-color: #f8f8f8;
@@ -76,14 +130,14 @@
 }
 
 .team-bottom-wrap .logos {
-	width: 120px;
+	width: 150px;
 	height: 120px;
 	background-position: -1494px -27px;
 	background-image: url('../../img/all_sprites.png');
 }
 
 .team-bottom-wrap .logo-2 {
-	background-position: -1715px -27px;
+	background-position: -1700px -27px;
 }
 .team-bottom-wrap .logo-3 {
 	position: relative;
@@ -93,11 +147,57 @@
 	background-position: -1905px -20px;
 }
 .team-bottom-wrap .logo-4 {
-	background-position: -2131px -27px;
+	height: 150px;
+	background-position: -2110px -23px;
 }
 .team-bottom-wrap .logo-5 {
-	background-position: -2340px -25px;
+	background-position: -2325px -25px;
 }
 .team-bottom-wrap .logo-6 {
-	background-position: -2563px -20px;
+	background-position: -2545px -20px;
+}
+
+@media (max-width: 1160px) {
+	.team-wrap {
+		justify-content: space-around;
+		margin-bottom: 60px;
+	}
+	.team-wrap .blocks {
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 940px) {
+	.team-bottom-wrap {
+	justify-content: center;
+}
+}
+@media (max-width: 470px) {
+.team-bottom-wrap .logos {
+	width: 120px;
+	height: 120px;
+	background-position: -1494px -27px;
+	background-image: url('../../img/all_sprites.png');
+}
+.team-bottom-wrap .logo-2 {
+	background-position: -1700px -27px;
+}
+.team-bottom-wrap .logo-3 {
+	position: relative;
+	width: 130px;
+	height: 130px;
+	top: -5px;
+	background-position: -1905px -20px;
+}
+.team-bottom-wrap .logo-4 {
+	width: 135px;
+	height: 150px;
+	background-position: -2125px -23px;
+}
+.team-bottom-wrap .logo-5 {
+	background-position: -2345px -25px;
+}
+.team-bottom-wrap .logo-6 {
+	background-position: -2555px -20px;
+}
 }
