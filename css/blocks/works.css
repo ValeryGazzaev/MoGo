@@ -1,0 +1,138 @@
+.works {
+	padding-top: 109px;
+}
+
+.works-top,
+.works  .center-p {
+	text-align: center;
+}
+
+.works .center-p {
+	max-width: 970px;
+	margin: 77px auto 69px;
+}
+
+.works-slider {
+	position: relative;
+	width: 1200px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.works-slider input {
+	display: none;
+}
+
+.works-slider .works-inner {
+	overflow-x: hidden; 
+}
+
+.works-slider-slides {
+	width: 300%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	transition: all 1s ease;
+}
+
+.works-slider-slides .slides {
+	width: 1200px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	padding: 70px 100px 62px;
+}
+
+.works-slider-slides .slides .images {
+	width: 147px;
+	height: 147px;
+	border: 3px solid #95e1d3;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('../../img/speech.png');
+	margin-right: 60px;
+}
+
+.works-slider-slides .slides .slides-inner p:first-child {
+	width: 760px;
+	font-size: 24px;
+	line-height: 36px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-style: italic;
+	margin-top: 2px;
+	margin-bottom: 12px;
+}
+
+.works-slider-slides .slides .slides-inner p:last-child {
+	position: relative;
+	width: 180px;
+	font-size: 24px;
+	line-height: 36px;
+	font-family: 'Kaushan Script', cursive;
+	color: #000;
+	text-indent: 70px;
+}
+
+.works-slider-slides .slides .slides-inner p:last-child::before {
+	position: absolute;
+	content: "";
+	width: 60px;
+	height: 3px;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	background-color: #f38181;
+}
+
+.works-controls {
+	position: relative;
+	width: 1155px;
+	margin: 0 auto;
+	z-index: 10;
+}
+
+/* Left arrow */
+#works-btn-1:checked ~ .works-controls label:nth-child(3),
+#works-btn-2:checked ~ .works-controls label:nth-child(1),
+#works-btn-3:checked ~ .works-controls label:nth-child(2) {
+	position: absolute;
+	display: block;
+	top: 140px;
+	left: 0;
+	width: 12px;
+	height: 22px;
+	background-image: url('../../img/arrow.png');
+}
+
+/* Right arrow */
+#works-btn-1:checked ~ .works-controls label:nth-child(2),
+#works-btn-2:checked ~ .works-controls label:nth-child(3),
+#works-btn-3:checked ~ .works-controls label:nth-child(1) {
+	position: absolute;
+	display: block;
+	top: 140px;
+	right: 0;
+	width: 12px;
+	height: 22px;
+	background-image: url('../../img/arrow.png');
+	transform: scaleX(-1);
+}
+
+/* control arrows */
+
+#works-btn-1:checked ~ .works-inner .works-slider-slides {
+	transform: translateX(0);
+}
+#works-btn-2:checked ~ .works-inner .works-slider-slides {
+	transform: translateX(-1200px);
+}
+#works-btn-3:checked ~ .works-inner .works-slider-slides {
+	transform: translateX(-2400px);
+}
