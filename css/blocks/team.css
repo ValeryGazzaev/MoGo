@@ -50,10 +50,11 @@
 	position: relative;
 	width: 380px;
 	height: 470px;
+	top: 0;
+	left: 0;
 	background-repeat: no-repeat;
-	-webkit-transition: all 0.3s ease;
-	-o-transition: all 0.3s ease;
-	transition: all 0.3s ease; 
+	box-shadow: none;
+	transition: all 0.2s ease; 
 	background-position: -940px -680px;
 	background-image: url('../../img/all_sprites.png');
 }
@@ -78,6 +79,8 @@
 }
 
 .team-wrap .blocks .team-image:hover {
+	top: -5px;
+	left: -5px;
 	-webkit-box-shadow: 10px 10px 0 0 #95e1d3;
 	box-shadow: 10px 10px 0 0 #95e1d3;
 }
@@ -87,15 +90,18 @@
 	width: 270px;
 	top: 50%;
 	left: 50%;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.4s ease;
 	-webkit-transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
-	display: none;
 	z-index: 10;
 }
 
 .team-wrap .blocks .team-image:hover .social {
-	display: block;
+		opacity: 1;
+	visibility: visible;
 }
 
 .team-wrap .blocks .team-image .social .social-btn {
@@ -105,6 +111,7 @@
 	height: 56px;
 	background-color: #fce38a;
 	color: #f38181;
+	transition: all 0.3s ease;
 }
 
 .team-wrap .blocks .team-image .social .social-btn i {
