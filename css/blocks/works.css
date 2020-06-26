@@ -20,6 +20,7 @@
 }
 
 .works-gallery .images {
+	position: relative;
 	background-image: url('../../img/all_sprites.png');
 }
 
@@ -32,11 +33,74 @@
 }
 
 .works-gallery .image-3 {
+	grid-column: 3 / 4;
+	grid-row: 1 / 3;
 	background-position: -20px -3140px;
 }
 
 .works-gallery .image-4 {
 	background-position: -20px -2730px;
+}
+
+.works-gallery .image-5 {
+	background-position: -20px -1910px;
+}
+
+.works-gallery .image-6 {
+	background-position: -20px -2320px;
+}
+
+.works-gallery .image-7 {
+	background-position: -20px -680px;
+}
+
+.works-gallery .images a {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	opacity: 0;
+	visibility: hidden;
+	background: linear-gradient(to top,rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
+	transition: all 0.3s ease;
+}
+
+.works-gallery .images:hover a {
+	opacity: 1;
+	visibility: visible;
+}
+
+.works-gallery .images a .inner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.works-gallery .images .inner .inner-img {
+	position: relative;
+	display: block;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 30px;
+	height: 30px;
+	background-image: url('../../img/pic.png');
+	z-index: 10;
+}
+
+.works-gallery .images .inner p:nth-child(2) {
+	text-transform: uppercase;
+	font-size: 14px;
+	line-height: 16px;
+	font-family: 'Montserrat', sans-serif;
+	color: #fff;
+}
+
+.works-gallery .images .inner p:nth-child(3) {
+	font-weight: 300;
+	font-style: italic;
+	color: #fff;
 }
 
 .works-wrap {
